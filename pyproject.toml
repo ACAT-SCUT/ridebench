@@ -1,0 +1,35 @@
+[project]
+name = "ridebench"
+version = "0.1.0"
+description = "Time-series forecasting benchmark for ride-hailing demand data"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "einops>=0.8.1",
+    "scikit-learn>=1.6,<1.7",
+    "matplotlib>=3.10,<4",
+    "torch>=2.2,<2.10",
+    "chronos-forecasting[extras]>=2.2",
+    "accelerate>=1.13,<2",
+    "tqdm<=4.67.1",
+    "reformer-pytorch>=1.4.4",
+    "transformers>=4.57,<5",
+    "numpy>=1.26,<2.2",
+    "pyarrow>=20.0.0",
+    "timesfm[torch]>=2.0.0",
+    "huggingface-hub>=0.36,<1",
+    "pandas>=2.3.3",
+]
+
+[project.scripts]
+ridebench = "ridebench.main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["ridebench*"]
+
+[tool.uv.sources]
+timesfm = { git = "https://github.com/google-research/timesfm.git", rev = "8a755c9c755fd5b1fe2f0c8af3b86d7a5b846160" }

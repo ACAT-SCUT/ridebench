@@ -1,0 +1,33 @@
+# Jupyter
+.ipynb_checkpoints
+
+# MacOS
+.DS_Store
+
+# IDEs
+.idea
+.vscode
+
+# Virtual Environments
+.venv
+
+# Python-generated Files
+__pycache__/
+*.py[oc]
+.mplconfig/
+build/
+dist/
+wheels/
+*.egg-info
+
+# Dataset Files
+/datasets/*.csv
+
+# Result Files
+/run_results/*
+!/run_results/summary_csv/
+!/run_results/summary_csv/*.csv
+/logs/
+
+# Pretrained Model Weights
+/pretrained_models/
